@@ -1,3 +1,9 @@
+commit 5574afe453e8ad0dec79447850cb65801adb5d33
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Wed Nov 18 23:24:57 2020 -0600
+
+    Added additional unittests raising coverage to 98%, updated makefile to output to TestDiplomacy.out instead of TestDiplomacy.tmp
+
 commit 55142ec76a6240fa8e01f6aba148ab0f668845c7
 Author: gqian75@gmail.com <gqian75@gmail.com>
 Date:   Wed Nov 18 22:34:52 2020 -0600
