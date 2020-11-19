@@ -1,3 +1,9 @@
+commit 023ea5ab9df82dd73c6fe58af80ecce589ef546e
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Wed Nov 18 20:32:53 2020 -0600
+
+    Added unittests to TestDiplomacy.py
+
 commit 45a3cbe33c6dfe7a910e989af9ed781ec5abbe33
 Author: Fares Fraij <fares@utexas.edu>
 Date:   Sat Jun 6 10:35:45 2020 -0500
