@@ -53,10 +53,10 @@ RunDiplomacy.tmp: RunDiplomacy.in RunDiplomacy.out RunDiplomacy.py
 	$(PYTHON) RunDiplomacy.py < RunDiplomacy.in > RunDiplomacy.tmp
 	diff --strip-trailing-cr RunDiplomacy.tmp RunDiplomacy.out
 
-TestDiplomacy.tmp: TestDiplomacy.py
-	$(COVERAGE) run    --branch TestDiplomacy.py >  TestDiplomacy.tmp 2>&1
-	$(COVERAGE) report -m                      >> TestDiplomacy.tmp
-	cat TestDiplomacy.tmp
+TestDiplomacy.out: TestDiplomacy.py
+	$(COVERAGE) run    --branch TestDiplomacy.py >  TestDiplomacy.out 2>&1
+	$(COVERAGE) report -m                      >> TestDiplomacy.out
+	cat TestDiplomacy.out
 
 check:
 	@not_found=0;                                 \
@@ -127,4 +127,4 @@ versions:
 	which        $(PYTHON)
 	$(PYTHON)    --version
 
-test: Diplomacy.html Diplomacy.log RunDiplomacy.tmp TestDiplomacy.tmp Diplomacy-tests check
+test: Diplomacy.html Diplomacy.log RunDiplomacy.tmp TestDiplomacy.out Diplomacy-tests check

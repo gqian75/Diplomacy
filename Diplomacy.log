@@ -1,3 +1,9 @@
+commit 55142ec76a6240fa8e01f6aba148ab0f668845c7
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Wed Nov 18 22:34:52 2020 -0600
+
+    implement diplomacy_solve() in Diplomacy.py
+
 commit 023ea5ab9df82dd73c6fe58af80ecce589ef546e
 Author: gqian75@gmail.com <gqian75@gmail.com>
 Date:   Wed Nov 18 20:32:53 2020 -0600
