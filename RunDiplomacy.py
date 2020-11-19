@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # ------------------------------
-# projects/collatz/RunCollatz.py
+# projects/Diplomacy/RunDiplomacy.py
 # Copyright (C) 2016
 # Glenn P. Downing
 # ------------------------------
@@ -12,17 +12,17 @@
 
 import sys
 
-from Collatz import collatz_solve
+from Diplomacy import diplomacy_solve
 
 # ----
 # main
 # ----
 
 if __name__ == "__main__":
-    collatz_solve(sys.stdin, sys.stdout)
+    diplomacy_solve(sys.stdin, sys.stdout)
 
 """ #pragma: no cover
-$ cat RunCollatz.in
+$ cat RunDiplomacy.in
 1 10
 100 200
 201 210
@@ -30,9 +30,9 @@ $ cat RunCollatz.in
 
 
 
-$ python RunCollatz.py < RunCollatz.in > RunCollatz.out
+$ python RunDiplomacy.py < RunDiplomacy.in > RunDiplomacy.out
 
-$ cat RunCollatz.out
+$ cat RunDiplomacy.out
 1 10 1
 100 200 1
 201 210 1
@@ -40,6 +40,6 @@ $ cat RunCollatz.out
 
 
 
-$ python -m pydoc -w Collatz"
-# That creates the file Collatz.html
+$ python -m pydoc -w Diplomacy"
+# That creates the file Diplomacy.html
 """

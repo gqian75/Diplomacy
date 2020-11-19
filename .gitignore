@@ -5,5 +5,5 @@ __pycache__
 .pylintrc
 *.pyc
 *.tmp
-cs330e-collatz-tests
+cs330e-Diplomacy-tests
 requirements-to-freeze.txt
