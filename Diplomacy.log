@@ -1,3 +1,9 @@
+commit 8c1c5bfc4b2ccdcec695319c04806df3f36b29f7
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Thu Nov 19 01:18:33 2020 -0600
+
+    Added 5 acceptance tests in 5 seperate files RunDiplomacyN.in and RunDiplomacyN.out
+
 commit 5574afe453e8ad0dec79447850cb65801adb5d33
 Author: gqian75@gmail.com <gqian75@gmail.com>
 Date:   Wed Nov 18 23:24:57 2020 -0600

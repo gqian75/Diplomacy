@@ -20,12 +20,13 @@ from Diplomacy import diplomacy_solve
 # -----------
 # TestDiplomacy
 # -----------
+
+
 class TestDiplomacy (TestCase):
-    # ----
-    # read
-    # ----
+    # Unittests for diplomacy_solve()
     def test_diplomacy_solve1(self):
-        r = StringIO("A Madrid Hold\nB Barcelona Move Madrid\nC London Support B")
+        r = StringIO(
+            "A Madrid Hold\nB Barcelona Move Madrid\nC London Support B")
         w = StringIO()
         diplomacy_solve(r, w)
         self.assertEqual(w.getvalue(), "A [dead]\nB Madrid\nC London\n")
@@ -33,67 +34,50 @@ class TestDiplomacy (TestCase):
     def test_diplomacy_solve2(self):
         r = StringIO("A Madrid Hold\nB Barcelona Move Madrid")
         w = StringIO()
-        diplomacy_solve(r,w)
+        diplomacy_solve(r, w)
         self.assertEqual(w.getvalue(), "A [dead]\nB [dead]\n")
 
     def test_diplomacy_solve3(self):
-        r = StringIO("A Madrid Hold\nB Barcelona Move Madrid\nC London Move Madrid\nD Paris Support B")
+        r = StringIO(
+            "A Madrid Hold\nB Barcelona Move Madrid\nC London Move Madrid\nD Paris Support B")
         w = StringIO()
-        diplomacy_solve(r,w)
-        self.assertEqual(w.getvalue(), "A [dead]\nB Madrid\nC [dead]\nD Paris\n")
+        diplomacy_solve(r, w)
+        self.assertEqual(
+            w.getvalue(), "A [dead]\nB Madrid\nC [dead]\nD Paris\n")
 
     def test_diplomacy_solve4(self):
-        r = StringIO("A Madrid Hold\nB Barcelona Move Madrid\nC London Support B\nD Austin Move London")
+        r = StringIO(
+            "A Madrid Hold\nB Barcelona Move Madrid\nC London Support B\nD Austin Move London")
         w = StringIO()
-        diplomacy_solve(r,w)
-        self.assertEqual(w.getvalue(), "A [dead]\nB [dead]\nC [dead]\nD [dead]\n")
-
+        diplomacy_solve(r, w)
+        self.assertEqual(
+            w.getvalue(), "A [dead]\nB [dead]\nC [dead]\nD [dead]\n")
 
     def test_diplomacy_solve5(self):
-        r = StringIO("A Madrid Hold\nB Barcelona Move Madrid\nC London Move Madrid\nD Paris Support B\nE Austin Support A")
+        r = StringIO(
+            "A Madrid Hold\nB Barcelona Move Madrid\nC London Move Madrid\nD Paris Support B\nE Austin Support A")
         w = StringIO()
-        diplomacy_solve(r,w)
-        self.assertEqual(w.getvalue(), "A [dead]\nB [dead]\nC [dead]\nD Paris\nE Austin\n")
+        diplomacy_solve(r, w)
+        self.assertEqual(
+            w.getvalue(), "A [dead]\nB [dead]\nC [dead]\nD Paris\nE Austin\n")
 
     def test_diplomacy_solve6(self):
-        r = StringIO("A Madrid Hold\nB Barcelona Move Madrid\nC London Move Madrid\nD Paris Support B")
+        r = StringIO(
+            "A Madrid Hold\nB Barcelona Move Madrid\nC London Move Madrid\nD Paris Support B")
+        w = StringIO()
+        diplomacy_solve(r, w)
+        self.assertEqual(
+            w.getvalue(), "A [dead]\nB Madrid\nC [dead]\nD Paris\n")
+
+    def test_diplomacy_solve7(self):
+        r = StringIO("A Madrid Move Barcelona")
         w = StringIO()
         diplomacy_solve(r,w)
-        self.assertEqual(w.getvalue(), "A [dead]\nB Madrid\nC [dead]\nD Paris\n")
-
+        self.assertEqual(w.getvalue(), "A Barcelona\n")
 
 
 # ----
 # main
 # ----
-
 if __name__ == "__main__":
     main()
-
-""" #pragma: no cover
-$ coverage run --branch TestDiplomacy.py >  TestDiplomacy.out 2>&1
-
-
-$ cat TestDiplomacy.out
-.......
-----------------------------------------------------------------------
-Ran 7 tests in 0.000s
-OK
-
-
-$ coverage report -m                   >> TestDiplomacy.out
-
-
-
-$ cat TestDiplomacy.out
-.......
-----------------------------------------------------------------------
-Ran 7 tests in 0.000s
-OK
-Name             Stmts   Miss Branch BrPart  Cover   Missing
-------------------------------------------------------------
-Diplomacy.py          12      0      2      0   100%
-TestDiplomacy.py      32      0      0      0   100%
-------------------------------------------------------------
-TOTAL               44      0      2      0   100%
-"""
