@@ -100,6 +100,7 @@ def diplomacy_solve(r, w):
 
     for s in r: # read all lines of the text file and store in proper lists
         i = s.split()
+        assert len(i)>=3
         army.append(str(i[0]))
         location.append(str(i[1]))
         action.append(str(i[2]))
@@ -113,7 +114,14 @@ def diplomacy_solve(r, w):
             support.append("none")
             move.append(str(i[3]))
     # sends list of infomation and return output
+    assert len(army)==len(location)
+    assert len(army)==len(action)
+    assert len(army)==len(support)
+    assert len(army)==len(move)
+
     output = diplomacy_eval(army, location, action, support, move)
+
+    assert len(output)==len(army)
     # writes out outputed text
     for i in output:
         w.write(i+"\n")
