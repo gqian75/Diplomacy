@@ -1,3 +1,9 @@
+commit 9b3b41cf11027510d958981479ef58ca6fa2998f
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Thu Nov 19 19:02:26 2020 -0600
+
+    CI Pipeline fail fix
+
 commit 47a0ae812abceb8354fdc7830689e3cf7ae9fc37
 Author: gqian75@gmail.com <gqian75@gmail.com>
 Date:   Thu Nov 19 19:00:00 2020 -0600

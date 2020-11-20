@@ -16,19 +16,7 @@ FILES :=                              \
     RunDiplomacy5.out                   \
     RunDiplomacy.py                     \
     TestDiplomacy.out                   \
-    TestDiplomacy.py										\
-    cs330e-Diplomacy-tests/grantqian-RunDiplomacy1.in   \
-    cs330e-Diplomacy-tests/grantqian-RunDiplomacy1.out  \
-		cs330e-Diplomacy-tests/grantqian-RunDiplomacy2.in   \
-		cs330e-Diplomacy-tests/grantqian-RunDiplomacy2.out  \
-		cs330e-Diplomacy-tests/grantqian-RunDiplomacy3.in   \
-		cs330e-Diplomacy-tests/grantqian-RunDiplomacy3.out  \
-		cs330e-Diplomacy-tests/grantqian-RunDiplomacy4.in   \
-		cs330e-Diplomacy-tests/grantqian-RunDiplomacy4.out  \
-		cs330e-Diplomacy-tests/grantqian-RunDiplomacy5.in   \
-		cs330e-Diplomacy-tests/grantqian-RunDiplomacy5.out  \
-    cs330e-Diplomacy-tests/grantqian-TestDiplomacy.out \
-    cs330e-Diplomacy-tests/grantqian-TestDiplomacy.py
+    TestDiplomacy.py										
 
 
 ifeq ($(shell uname), Darwin)          # Apple
