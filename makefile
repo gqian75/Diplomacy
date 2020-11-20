@@ -1,20 +1,23 @@
-.PHONY: Collatz.log
+.PHONY: Diplomacy.log
 
 FILES :=                              \
-    Collatz.html                      \
-    Collatz.log                       \
-    Collatz.py                        \
-    RunCollatz.in                     \
-    RunCollatz.out                    \
-    RunCollatz.py                     \
-    TestCollatz.out                   \
-    TestCollatz.py
+    Diplomacy.html                      \
+    Diplomacy.log                       \
+    Diplomacy.py                        \
+    RunDiplomacy1.in                    \
+    RunDiplomacy1.out                   \
+		RunDiplomacy2.in                    \
+    RunDiplomacy2.out                   \
+		RunDiplomacy3.in                    \
+    RunDiplomacy3.out                   \
+		RunDiplomacy4.in                    \
+    RunDiplomacy4.out                   \
+		RunDiplomacy5.in                    \
+    RunDiplomacy5.out                   \
+    RunDiplomacy.py                     \
+    TestDiplomacy.out                   \
+    TestDiplomacy.py										
 
-#    cs330e-collatz-tests/YourGitLabID-RunCollatz.in   \
-#    cs330e-collatz-tests/YourGitLabID-RunCollatz.out  \
-#    cs330e-collatz-tests/YourGitLabID-TestCollatz.out \
-#    cs330e-collatz-tests/YourGitLabID-TestCollatz.py  \
-#
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3
@@ -40,23 +43,39 @@ else                                   # UTCS
 endif
 
 
-collatz-tests:
-	git clone https://gitlab.com/fareszf/cs330e-collatz-tests.git
+Diplomacy-tests:
+	git clone https://gitlab.com/fareszf/cs330e-diplomacy-tests.git
 
-Collatz.html: Collatz.py
-	$(PYDOC) -w Collatz
+Diplomacy.html: Diplomacy.py
+	$(PYDOC) -w Diplomacy
 
-Collatz.log:
-	git log > Collatz.log
+Diplomacy.log:
+	git log > Diplomacy.log
 
-RunCollatz.tmp: RunCollatz.in RunCollatz.out RunCollatz.py
-	$(PYTHON) RunCollatz.py < RunCollatz.in > RunCollatz.tmp
-	diff --strip-trailing-cr RunCollatz.tmp RunCollatz.out
+RunDiplomacy1.tmp: RunDiplomacy1.in RunDiplomacy1.out RunDiplomacy.py
+		$(PYTHON) RunDiplomacy.py < RunDiplomacy1.in > RunDiplomacy1.tmp
+		diff --strip-trailing-cr RunDiplomacy1.tmp RunDiplomacy1.out
 
-TestCollatz.tmp: TestCollatz.py
-	$(COVERAGE) run    --branch TestCollatz.py >  TestCollatz.tmp 2>&1
-	$(COVERAGE) report -m                      >> TestCollatz.tmp
-	cat TestCollatz.tmp
+RunDiplomacy2.tmp: RunDiplomacy2.in RunDiplomacy2.out RunDiplomacy.py
+		$(PYTHON) RunDiplomacy.py < RunDiplomacy2.in > RunDiplomacy2.tmp
+		diff --strip-trailing-cr RunDiplomacy2.tmp RunDiplomacy2.out
+
+RunDiplomacy3.tmp: RunDiplomacy3.in RunDiplomacy3.out RunDiplomacy.py
+		$(PYTHON) RunDiplomacy.py < RunDiplomacy3.in > RunDiplomacy3.tmp
+		diff --strip-trailing-cr RunDiplomacy3.tmp RunDiplomacy3.out
+
+RunDiplomacy4.tmp: RunDiplomacy4.in RunDiplomacy4.out RunDiplomacy.py
+		$(PYTHON) RunDiplomacy.py < RunDiplomacy4.in > RunDiplomacy4.tmp
+		diff --strip-trailing-cr RunDiplomacy4.tmp RunDiplomacy4.out
+
+RunDiplomacy5.tmp: RunDiplomacy5.in RunDiplomacy5.out RunDiplomacy.py
+		$(PYTHON) RunDiplomacy.py < RunDiplomacy5.in > RunDiplomacy5.tmp
+		diff --strip-trailing-cr RunDiplomacy5.tmp RunDiplomacy5.out
+
+TestDiplomacy.tmp: TestDiplomacy.py
+	$(COVERAGE) run    --branch TestDiplomacy.py >  TestDiplomacy.out 2>&1
+	$(COVERAGE) report -m                      >> TestDiplomacy.out
+	cat TestDiplomacy.out
 
 check:
 	@not_found=0;                                 \
@@ -80,23 +99,27 @@ check:
 clean:
 	rm -f  .coverage
 	rm -f  *.pyc
-	rm -f  RunCollatz.tmp
-	rm -f  TestCollatz.tmp
+	rm -f  RunDiplomacy1.tmp
+	rm -f  RunDiplomacy2.tmp
+	rm -f  RunDiplomacy3.tmp
+	rm -f  RunDiplomacy4.tmp
+	rm -f  RunDiplomacy5.tmp
+	rm -f  TestDiplomacy.tmp
 	rm -rf __pycache__
-	rm -rf cs330e-collatz-tests
+	rm -rf cs330e-Diplomacy-tests
 
 config:
 	git config -l
 
 format:
-	$(AUTOPEP8) -i Collatz.py
-	$(AUTOPEP8) -i RunCollatz.py
-	$(AUTOPEP8) -i TestCollatz.py
+	$(AUTOPEP8) -i Diplomacy.py
+	$(AUTOPEP8) -i RunDiplomacy.py
+	$(AUTOPEP8) -i TestDiplomacy.py
 
 scrub:
 	make clean
-	rm -f  Collatz.html
-	rm -f  Collatz.log
+	rm -f  Diplomacy.html
+	rm -f  Diplomacy.log
 
 status:
 	make clean
@@ -127,4 +150,4 @@ versions:
 	which        $(PYTHON)
 	$(PYTHON)    --version
 
-test: Collatz.html Collatz.log RunCollatz.tmp TestCollatz.tmp collatz-tests check
+test: Diplomacy.html Diplomacy.log RunDiplomacy1.tmp RunDiplomacy2.tmp RunDiplomacy3.tmp RunDiplomacy4.tmp RunDiplomacy5.tmp TestDiplomacy.tmp Diplomacy-tests check

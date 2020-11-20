@@ -1,3 +1,3 @@
-# cs330e-collatz
+# cs330e-Diplomacy
 
-cs330e-collatz
+cs330e-Diplomacy

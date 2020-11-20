@@ -1,0 +1,59 @@
+commit c333e5a35851cacd1fd5bf4484335a98db89e08a
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Thu Nov 19 19:12:15 2020 -0600
+
+    Pipeline fix attempt #2
+
+commit 9b3b41cf11027510d958981479ef58ca6fa2998f
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Thu Nov 19 19:02:26 2020 -0600
+
+    CI Pipeline fail fix
+
+commit 47a0ae812abceb8354fdc7830689e3cf7ae9fc37
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Thu Nov 19 19:00:00 2020 -0600
+
+    Final commit: Changed format and added additional comments. Added public acceptance tests to make file
+
+commit 8c1c5bfc4b2ccdcec695319c04806df3f36b29f7
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Thu Nov 19 01:18:33 2020 -0600
+
+    Added 5 acceptance tests in 5 seperate files RunDiplomacyN.in and RunDiplomacyN.out
+
+commit 5574afe453e8ad0dec79447850cb65801adb5d33
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Wed Nov 18 23:24:57 2020 -0600
+
+    Added additional unittests raising coverage to 98%, updated makefile to output to TestDiplomacy.out instead of TestDiplomacy.tmp
+
+commit 55142ec76a6240fa8e01f6aba148ab0f668845c7
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Wed Nov 18 22:34:52 2020 -0600
+
+    implement diplomacy_solve() in Diplomacy.py
+
+commit 023ea5ab9df82dd73c6fe58af80ecce589ef546e
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Wed Nov 18 20:32:53 2020 -0600
+
+    Added unittests to TestDiplomacy.py
+
+commit 45a3cbe33c6dfe7a910e989af9ed781ec5abbe33
+Author: Fares Fraij <fares@utexas.edu>
+Date:   Sat Jun 6 10:35:45 2020 -0500
+
+    second commit
+
+commit 0cd09a5c9fb1a857dce11686104ab052d42b269b
+Author: Fares Fraij <fares@utexas.edu>
+Date:   Fri May 29 11:11:36 2020 -0500
+
+    first commit
+
+commit 3390fe29f60392d73e1810e7b55331c613e4a1c5
+Author: Fares Fraij <fares@utexas.edu>
+Date:   Fri May 29 16:02:55 2020 +0000
+
+    Initial commit
