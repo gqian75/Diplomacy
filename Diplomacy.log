@@ -1,3 +1,9 @@
+commit 47a0ae812abceb8354fdc7830689e3cf7ae9fc37
+Author: gqian75@gmail.com <gqian75@gmail.com>
+Date:   Thu Nov 19 19:00:00 2020 -0600
+
+    Final commit: Changed format and added additional comments. Added public acceptance tests to make file
+
 commit 8c1c5bfc4b2ccdcec695319c04806df3f36b29f7
 Author: gqian75@gmail.com <gqian75@gmail.com>
 Date:   Thu Nov 19 01:18:33 2020 -0600
